@@ -6,12 +6,11 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Strangers in Space
 
 @start_menu_2
 
 - @start: Start game
-- @election_simulation: Election simulation
 - @credits: Credits
 - @game_over.achievements
 
@@ -19,10 +18,10 @@ go-to: start_menu_2
 @start
 on-arrival: {!
 Q.started = 1;
-// time elapsed (in months)
+// time elapsed (in weeks)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 1963;
+Q.month = 4;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -35,18 +34,18 @@ Q.old_demographics = 0;
 // TODO: not yet implemented
 Q.use_decimals = 0;
 
-// party resources
-Q.resources = 2;
+// budget
+Q.resources = 20;
 // party dues
-Q.dues = 2;
+Q.dues = 0;
 
-// the state of the party
-// overall dissent reduces every increase in party support.
-Q.dissent = 0.05;
-Q.dissent_percent = 5;
+// behind the scenes drama
+// overall behind the scenes drama reduces every increase in ratings.
+Q.behind the scenes drama = 0.05;
+Q.behind the scenes drama_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['GBB', 'unions', 'cast and crew', 'reformist', 'neorevisionist'];
 // should this be normalized to 100%?
 Q.left_strength = 15;
 Q.left_dissent = 20;
